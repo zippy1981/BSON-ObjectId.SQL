@@ -1,0 +1,5 @@
+The purpose of this project is to implement BSON Object Ids in SQL RDBMSes, initially Microsoft SQL Server 2008.
+
+The initial target will be a T-SQL based implementation for SQL server 2008, followed by a CLR implementation based on the C++ BSON implementation.
+
+Future targets will be older versions of SQL Server, Postgres, and whatever else I have reason to implement or is contributed.
