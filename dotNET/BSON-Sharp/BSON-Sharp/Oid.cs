@@ -20,7 +20,7 @@ using System.Text.RegularExpressions;
 using Microsoft.SqlServer.Server;
 
 /// <summary>
-///   Oid is a struct object that represents a Mongo ObjectId.
+///   Oid is a struct object that represents a Mongo ObjectId. This is a SQL CLR type.
 /// </summary>
 /// <remarks>
 /// Format.Native will not work here since the struct contains an array.

@@ -4,6 +4,12 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # SharpDevelop 4.0.0.6364
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSON-Sharp", "BSON-Sharp\BSON-Sharp.csproj", "{503608A1-74FF-4B68-A678-5C9922F3C2EF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{41C6A3C9-4B55-452B-8B90-99B0BD9577D1}"
+	ProjectSection(SolutionItems) = postProject
+		SQL\CLR_Oid.sql = SQL\CLR_Oid.sql
+		SQL\Example.sql = SQL\Example.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
