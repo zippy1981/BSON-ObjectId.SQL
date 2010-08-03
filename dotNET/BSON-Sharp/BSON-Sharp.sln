@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.0.0.6364
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSON-Sharp", "BSON-Sharp\BSON-Sharp.csproj", "{503608A1-74FF-4B68-A678-5C9922F3C2EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{503608A1-74FF-4B68-A678-5C9922F3C2EF}.Debug|x86.Build.0 = Debug|x86
+		{503608A1-74FF-4B68-A678-5C9922F3C2EF}.Debug|x86.ActiveCfg = Debug|x86
+		{503608A1-74FF-4B68-A678-5C9922F3C2EF}.Release|x86.Build.0 = Release|x86
+		{503608A1-74FF-4B68-A678-5C9922F3C2EF}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+EndGlobal
