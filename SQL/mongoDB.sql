@@ -32,17 +32,19 @@ GO
 CREATE FUNCTION dbo.ufn_NewOid(@machineId BINARY(3)) RETURNS  BSONOID AS
 BEGIN
 	DECLARE @ret BSONOID
+	DECLARE @currDate AS DATETIME2
 	DECLARE @currDateBinary AS CHAR(10)
 	DECLARE @twoFiftySix AS BIGINT
 	SET @twoFiftySix = 256
 	-- To get the current date as a unix timestamp
 	-- See: http://mysql.databases.aspfaq.com/how-do-i-convert-a-sql-server-datetime-value-to-a-unix-timestamp.html
-	SET @currDateBinary = CONVERT(CHAR(10), CAST(DATEDIFF(s, '1970-01-01', GETDATE()) AS varbinary), 1)
+	SET @currDate = SYSDATETIME()
+	SET @currDateBinary = CONVERT(CHAR(10), CAST(DATEDIFF(s, '1970-01-01', @currDate) AS varbinary), 1)
 	-- BTW, to do the opposite: SELECT DATEADD(s, 1067441023, '1970-01-01')
 	SET @ret = 
 		(@machineId * POWER(@twoFiftySix, 5)) +
-		(@@SPID * POWER(@twoFiftySix, 3))
-		--TODO: Sequence
+		(@@SPID * POWER(@twoFiftySix, 3)) +
+		CAST(DATEPART(MCS, SYSDATETIME()) AS binary(3)) -- TODO: More complete sequence.
 	SET @ret = CONVERT(BINARY(12), @currDateBinary + SUBSTRING(CONVERT(CHAR(26), @ret, 1), 11, 16), 1)
 	RETURN @ret
 END
